@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Необязательное задание.
 
 Необходимо от пользователя получить число.
@@ -25,30 +25,44 @@
 
 Уточнение: пользователь всегда вводит корректное положительное целое число.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
+      // вариант 1
 
-let number = prompt("Введите число");
-let units = 0;
-let dozens = 0;
-let hundreds = 0;
+      let number = prompt("Введите число");
+      let units = 0;
+      let dozens = 0;
+      let hundreds = 0;
 
+      if (number > 100) {
+        hundreds = number[number.length - 3];
+      }
 
-if (number > 100){
-hundreds = number[(number.length - 3)];
-};
+      if (number > 10) {
+        dozens = number[number.length - 2];
+      }
 
-if (number > 10){
-dozens = number[(number.length - 2)];
-};
+      if (number > 1) {
+        units = number[number.length - 1];
+      }
 
-if (number > 1){
-units = number[(number.length - 1)];
-};
+      alert(`Сотен: ${hundreds}, Десятков: ${dozens}, Единиц: ${units}`);
 
+      // вариант 2
 
-  alert(`Сотен: ${hundreds}, Десятков: ${dozens}, Единиц: ${units}`);
+      number = +prompt("Введите число");
+      units = 0;
+      dozens = 0;
+      hundreds = 0;
 
-</script>
-</body>
+      units = number % 10;
+      number = parseInt(number / 10);
+      dozens = number % 10;
+      number = parseInt(number / 10);
+      hundreds = number % 10;
+      number = parseInt(number / 10);
+
+      alert(`Сотен: ${hundreds}, Десятков: ${dozens}, Единиц: ${units}`);
+    </script>
+  </body>
 </html>
