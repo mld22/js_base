@@ -28,7 +28,27 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+let number = prompt("Введите число");
+let units = 0;
+let dozens = 0;
+let hundreds = 0;
+
+
+if (number > 100){
+hundreds = number[(number.length - 3)];
+};
+
+if (number > 10){
+dozens = number[(number.length - 2)];
+};
+
+if (number > 1){
+units = number[(number.length - 1)];
+};
+
+
+  alert(`Сотен: ${hundreds}, Десятков: ${dozens}, Единиц: ${units}`);
+
 </script>
 </body>
 </html>
