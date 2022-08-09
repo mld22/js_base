@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Обязательное задание.
 
 Необходимо вывести в консоль значения выражений:
@@ -27,52 +27,46 @@
 */
 console.log(3 - 4 * 2);
 -->
-<script>
-  "use strict";
-let result0 = 10 + 10 + '10'; 
-/*
+    <script>
+      "use strict";
+      let result0 = 10 + 10 + "10";
+      /*
 1. 10 прибавляем к 10 получаем 20.
 2. 20 + конкатенация с строкой '10', получаем 2010.
 3. С помощью console.log выводим число 2010 в консоль.
 */
-console.log(result0);
+      console.log(result0);
 
-let result1 = 10 + '10' + 10; 
-/*
+      let result1 = 10 + "10" + 10;
+      /*
 1. 10 + конкатенация с строкой '10', получаем 1010.
 2. 1010 + конкатенация с 10, получаем 101010.
 3. С помощью console.log выводим число 101010 в консоль.
 */
-console.log(result1);
-let result2 = 10 + 10 + +'10'; 
-/*
+      console.log(result1);
+      let result2 = 10 + 10 + +"10";
+      /*
 1. к 10 прибавляем 10, получаем 20.
 2. 20 + 10, получаем 30, так как строка "10" приводиться к числовому типу.
 3. С помощью console.log выводим число 30 в консоль.
 */
-console.log(result2);
+      console.log(result2);
 
-let result3 = 10 / -'';
-/*
+      let result3 = 10 / -"";
+      /*
 1. Унарный минус приводит строку к -0, при делении числа 10 на -0,
  получаем -Infinity.
 2. С помощью console.log выводим -Infinity в консоль.
 */
-console.log(result3);
+      console.log(result3);
 
-let result4 = 10 / +'2.5'; // 4
-/*
+      let result4 = 10 / +"2.5"; // 4
+      /*
 1. Унарный плюс приводит строку к числу 2.5, при делении числа 10 на 2.5,
  получаем 4.
 2. С помощью console.log выводим 4 в консоль.
 */
-console.log(result4);
-
-
-
-
-
-
-</script>
-</body>
+      console.log(result4);
+    </script>
+  </body>
 </html>
