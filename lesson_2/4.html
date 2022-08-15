@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -28,10 +28,56 @@
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
-</body>
+      /**
+       * Разность двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Разность чисел a и b
+       */
+      function calculSub(a, b) {
+        if (a > b) {
+          return a - b;
+        } else if (a < b) {
+          return b - a;
+        }
+        return 0;
+      }
+      console.log(calculSub(5, 3));
+
+      /**
+       * Сложение двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Сумма чисел a и b
+       */
+      function calculSum(a, b) {
+        return a + b;
+      }
+      console.log(calculSum(2, 3));
+
+      /**
+       * Умножение двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Произведение чисел a и b
+       */
+      function calculMul(a, b) {
+        return a * b;
+      }
+      console.log(calculMul(2, 3));
+      /**
+       * Деление двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Частное чисел a и b
+       */
+      function calculDiv(a, b) {
+        return b / a;
+      }
+      console.log(calculDiv(9, 3));
+    </script>
+  </body>
 </html>

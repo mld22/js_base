@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Обязательное задание.
 
 Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
@@ -29,10 +29,89 @@ Infinity делать не нужно, однако, в случае если б
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
-</body>
+      const a = Number.parseInt(prompt("Введите целочисленное значение"));
+      const b = Number.parseInt(prompt("Введите целочисленное значение"));
+      const operation = String(
+        prompt("Введите символ соответствующий желаемой операции")
+      );
+
+      /**
+       * Разность двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Разность чисел a и b
+       */
+      function calculSub(a, b) {
+        if (a > b) {
+          return a - b;
+        } else if (a < b) {
+          return b - a;
+        }
+        return 0;
+      }
+
+      /**
+       * Сложение двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Сумма чисел a и b
+       */
+      function calculSum(a, b) {
+        return a + b;
+      }
+
+      /**
+       * Умножение двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Произведение чисел a и b
+       */
+      function calculMul(a, b) {
+        return a * b;
+      }
+
+      /**
+       * Деление двух чисел
+       * @param {number} a - Первое число
+       * @param {number} b - Второе число
+       * * @returns {number} Частное чисел a и b
+       */
+      function calculDiv(a, b) {
+        return b / a;
+      }
+
+      /**
+       * Функция возвращает результат операции(Сложения/Вычитания/Деления/Умножения), который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2)
+       * @param {number} arg1 - Первое число
+       * @param {number} arg2 - Второе число
+       * @param {string} operation - символ соотвествующий желаемой операции: "+"/ "-"/ "*"/ "/"
+       * @returns {number} Сумма, Разность, Произведение или Частное чисел arg1 и arg2
+       * @returns {number} - NaN - если был передан некорректный аргумент в параметр operation
+       */
+      function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+          case "+":
+            return calculSum(arg1, arg2);
+
+          case "-":
+            return calculSub(arg1, arg2);
+
+          case "*":
+            return calculMul(arg1, arg2);
+
+          case "/":
+            return calculDiv(arg1, arg2);
+
+          default:
+            return NaN;
+        }
+      }
+
+      alert(mathOperation(a, b, operation));
+    </script>
+  </body>
 </html>
